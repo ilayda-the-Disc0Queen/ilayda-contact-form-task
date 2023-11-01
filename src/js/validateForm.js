@@ -11,10 +11,10 @@ export function validate() {
         // Basic form validation: check for '@' in email field and non-blank message field
         if (email.includes('@') && message) {
             showSuccessMessage(true);
-            setSuccessState = true;
+            setSuccessState(true);
         } else {
             showSuccessMessage(false);
-            setSuccessState = false;
+            setSuccessState(false);
         }
     });
 }
