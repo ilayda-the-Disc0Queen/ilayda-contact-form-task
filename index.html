@@ -18,10 +18,16 @@
             <textarea name="message" placeholder="Your message *" class="input-field"></textarea>
             <input type="submit" value="Send" class="submit-btn">
         </form>
-
-        <!-- This error message should be displayed if validation fails -->
-        <div class="error-message">Please enter a valid email address and some message text.</div>
     </div>
+
+    <!-- Message modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
 
     <script src="./src/js/init.js" type="module"></script>
 
