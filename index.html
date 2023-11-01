@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contact Form Task</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <form>
+            <input type="text" name="name" placeholder="Your name" class="input-field">
+            <input type="text" name="email" placeholder="Your email *" class="input-field">
+            <textarea name="message" placeholder="Your message *" class="input-field"></textarea>
+            <input type="submit" value="Send" class="submit-btn">
+        </form>
+
+        <!-- This error message should only be displayed if validation fails -->
+        <div class="error-message">Email and message are required fields.</div>
+    </div>
+
+    <script src="./src/js/init.js" type="module"></script>
+
+</body>
+
+</html>
