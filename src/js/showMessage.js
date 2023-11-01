@@ -4,7 +4,15 @@ let messageContent = {
 	"alreadySubmitted": "You have already submitted this form!",
 };
 
-export let successState = false;
+let successState = false;
+
+export function getSuccessState() {
+    return successState;
+}
+
+export function setSuccessState(value) {
+    successState = value;
+}
 
 export function showSuccessMessage(didSucceed) {
     const modal = document.getElementById('modal');
@@ -13,13 +21,10 @@ export function showSuccessMessage(didSucceed) {
 
 	if (successState) {
 		modalMessage.textContent = messageContent.alreadySubmitted;
-		successState = true;
 	} else if (didSucceed && !successState) {
         modalMessage.textContent = messageContent.success;
-		successState = true;
     } else {
         modalMessage.textContent = messageContent.error;
-		successState = false;
     }
 
     modal.style.display = "block";
