@@ -6,11 +6,13 @@ let messageContent = {
 
 let successState = false;
 
-export function getSuccessState() {
+// Getter function for successState
+export function getHasSubmitted() {
     return successState;
 }
 
-export function setSuccessState(value) {
+// Setter function for successState
+export function setHasSubmitted(value) {
     successState = value;
 }
 
@@ -19,10 +21,15 @@ export function showSuccessMessage(didSucceed) {
     const modalMessage = document.getElementById('modal-message');
     const closeModal = document.querySelector('.close-btn');
 
-	if (successState) {
-		modalMessage.textContent = messageContent.alreadySubmitted;
-	} else if (didSucceed && !successState) {
-        modalMessage.textContent = messageContent.success;
+    if (didSucceed) {
+		// TODO: The `alreadySubmitted` message is wrongly showing before 
+		// the user has successfully submitted the form. We need to fix this!
+        if (getHasSubmitted) {
+            modalMessage.textContent = messageContent.alreadySubmitted;
+        } else {
+            modalMessage.textContent = messageContent.success;
+            setHasSubmitted(true);
+        }
     } else {
         modalMessage.textContent = messageContent.error;
     }

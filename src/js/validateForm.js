@@ -1,4 +1,4 @@
-import { showSuccessMessage, setSuccessState } from './showMessage.js';
+import { showSuccessMessage, setHasSubmitted } from './showMessage.js';
 
 export function validate() {
     const form = document.querySelector('form');
@@ -9,12 +9,11 @@ export function validate() {
         const message = document.querySelector('textarea[name="message"]').value;
 
         // Basic form validation: check for '@' in email field and non-blank message field
+        // TODO: This validation could probably be improved!
         if (email.includes('@') && message) {
             showSuccessMessage(true);
-            setSuccessState(true);
         } else {
             showSuccessMessage(false);
-            setSuccessState(false);
         }
     });
 }
