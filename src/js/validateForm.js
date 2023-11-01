@@ -1,4 +1,4 @@
-import { showMessage } from './showMessage.js';
+import { showSuccessMessage, successState } from './showMessage.js';
 
 export function validate() {
     const form = document.querySelector('form');
@@ -10,9 +10,11 @@ export function validate() {
 
         // Basic form validation: check for '@' in email field and non-blank message field
         if (email.includes('@') && message) {
-            showMessage("success");
+            showSuccessMessage(true);
+            successState = true;
         } else {
-            showMessage("error");
+            showSuccessMessage(false);
+            successState = false;
         }
     });
 }
