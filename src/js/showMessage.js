@@ -24,7 +24,8 @@ export function showSuccessMessage(didSucceed) {
     if (didSucceed) {
 		// TODO: The `alreadySubmitted` message is wrongly showing before 
 		// the user has successfully submitted the form. We need to fix this!
-        if (getHasSubmitted) {
+
+        if (getHasSubmitted()) {
             modalMessage.textContent = messageContent.alreadySubmitted;
         } else {
             modalMessage.textContent = messageContent.success;
