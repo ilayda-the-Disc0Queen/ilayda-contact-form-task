@@ -1,12 +1,13 @@
 # Pre-interview task: Contact form
 
-This exercise will test your understanding of HTML, CSS and JavaScript, particularly ES6 modules, DOM manipulation, and event handling. 
 
-## Overview
+## Quick note from me (Ilayda!)
 
-You are provided with a simple contact form that has a couple of issues. Your task is to identify and fix them. 
-The form has been built using pure HTML, CSS, and JavaScript, leveraging ES6 modules. Note no actual POST requests are made with this form: 
-the task is to handle the pre-submission validation.
+I enjoyed this challenge so thanks for the opportunity! I left the TODO comments in so the tasks could be easily found. I also added a few comments of my own to explain a bit of my thought process ahead of the interview.
+
+Given more time I think the form submission and validation error messages could be made more slick, for example, if a user submits two unique messages from the same email address, the success message that pops up says 'You've already submitted' which is only partially correct (same email, different message). I also set constraints on the textarea input because a user could drag it all about making the form look untidy. 
+
+I look forward to further discussing the tasks with you in person tomorrow! 
 
 ## Setup
 
